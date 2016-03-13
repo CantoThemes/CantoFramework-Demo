@@ -305,7 +305,7 @@ $options[] = array(
 		array(
 			'setting' => array(
 				'id' => 'color_control',
-				'default' => '#ff00ff',
+				'default' => '#04a5c9',
 				'type' => 'theme_mod',
 			),
 			'control' => array(
