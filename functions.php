@@ -397,6 +397,168 @@ $options[] = array(
 	)
 );
 
+// Advance Controls
+$options[] = array(
+	'id'				=> 'google_font_controls',
+	'priority'			=> 10,
+	'title'				=> __('Google Font Controls'),
+	'description'		=> __('All Google Font Controls.'),
+	'active_callback'	=> '',
+	'options'			=> array(
+		array(
+			'setting' => array(
+				'id' => 'google_font_default',
+				'default' => array(
+					'font-family' => 'Open Sans',
+					'font-weight' => '300',
+					'font-size' => '24px',
+					'line-height' => '40px',
+				),
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Google Font (Default)', 'mytheme' ),
+				'subtitle'    => __( 'Google font without latter and word spacing.', 'mytheme' ),
+				'type'     => 'google_font',
+			),
+		),
+		array(
+			'setting' => array(
+				'id' => 'google_font_advance',
+				'default' => array(
+					'font-family' => 'Roboto',
+					'font-weight' => '300',
+					'font-size' => '24px',
+					'line-height' => '40px',
+					'letter-spacing' => '2px',
+					'word-spacing' => '5px',
+				),
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Google Font (Advance)', 'mytheme' ),
+				'subtitle'    => __( 'Google font with latter and word spacing.', 'mytheme' ),
+				'type'     => 'google_font',
+				'choices' => array(
+					'font-family' => 1,
+					'font-weight' => 1,
+					'font-size' => 1,
+					'line-height' => 1,
+					'letter-spacing' => 1,
+					'word-spacing' => 1,
+				)
+			),
+		),
+	)
+);
+
+// Advance Controls
+$options[] = array(
+	'id'				=> 'select_img_controls',
+	'priority'			=> 10,
+	'title'				=> __('Select &amp; Image Upload Controls'),
+	'description'		=> __('All Select &amp; Image Upload Controls.'),
+	'active_callback'	=> '',
+	'options'			=> array(
+		array(
+			'setting' => array(
+				'id' => 'select_control',
+				'default' => 'test3',
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Select Control', 'mytheme' ),
+				'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+				'description'    => __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id fecit cognoscerem vetuit inertissimae sapientiamque terrore at discedere culpa.', 'mytheme' ),
+				'type'     => 'select',
+				'choices' => array(
+					'test1' => 'Test 1',
+					'test2' => 'Test 2',
+					'test3' => 'Test 3',
+					'test4' => 'Test 4',
+				)
+			),
+		),
+		array(
+			'setting' => array(
+				'id' => 'image_upload',
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Image Control', 'mytheme' ),
+				'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+				'type'     => 'image',
+			),
+		),
+	)
+);
+
+// Advance Controls
+$options[] = array(
+	'id'				=> 'advance_controls',
+	'priority'			=> 10,
+	'title'				=> __('Advance Controls'),
+	'description'		=> __('All Advance Controls.'),
+	'active_callback'	=> '',
+	'options'			=> array(
+		array(
+			'setting' => array(
+				'id' => 'icon_control',
+				'default' => 'fa fa-cogs',
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Icon Control', 'mytheme' ),
+				'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+				'type'     => 'icon',
+			),
+		),
+		
+		array(
+			'setting' => array(
+				'id' => 'text_align',
+				'default' => 'center',
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Text Align Control', 'mytheme' ),
+				'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+				'type'     => 'text_align',
+			),
+		),
+
+		array(
+			'setting' => array(
+				'id' => 'font_style',
+				'default' => array(
+					'bold' => 'on',
+					'italic' => 'off',
+					'underline' => 'off',
+					'strikethrough' => 'on',
+				),
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Font Style Control', 'mytheme' ),
+				'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+				'type'     => 'font_style',
+			),
+		),
+		array(
+			'setting' => array(
+				'id' => 'editor_control',
+				'default' => 'Editor',
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Editor', 'mytheme' ),
+				'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+				'type'     => 'editor',
+			),
+		),
+	)
+);
+
 if (class_exists('CTF_Customizer')) {
 	$args = array(
 		'opt_name' => 'test_opt'
