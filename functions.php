@@ -490,6 +490,17 @@ $options[] = array(
 				'type'     => 'image',
 			),
 		),
+		array(
+			'setting' => array(
+				'id' => 'image_multi_upload',
+				'type' => 'theme_mod',
+			),
+			'control' => array(
+				'label'    => __( 'Multi Image Control', 'mytheme' ),
+				'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+				'type'     => 'image_multi',
+			),
+		),
 	)
 );
 
@@ -564,4 +575,265 @@ if (class_exists('CTF_Customizer')) {
 		'opt_name' => 'test_opt'
 	);
 	new CTF_Customizer($args, $options);
+}
+
+
+
+// Shortcodes Map Test
+test_sc_map();
+function test_sc_map() {
+	
+
+    if ( ! class_exists('CTSCG') ) {
+        return;
+    }
+
+    CTSCG::add_shortcodes_data( array(
+        'title' => 'Test Shortcode',
+        'subtitle' => 'Test Shortcode Subtitle',
+        'code' => 'test',
+        'hascontent' => false,
+        'icon' => 'fa fa-cogs',
+        'options' => array(
+            array(
+                'id' => 'data',
+                'label'    => __( 'Text Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'text',
+                'default' => 'Test Text',
+            ),
+            array(
+                'id' => 'color',
+                'label'    => __( 'Color Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'color',
+                'default' => '#ffffff',
+            ),
+            array(
+                'id' => 'multi',
+                'label'    => __( 'Multi-Text Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'text_multi',
+                'default' => array(
+                    'test 1',
+                    'test 2'
+                )
+            ),
+        )
+    ) );
+
+    CTSCG::add_shortcodes_data( array(
+        'title' => 'Test 2 Shortcode',
+        'subtitle' => 'Test Shortcode Subtitle',
+        'code' => 'test2',
+        'hascontent' => true,
+        'icon' => 'fa fa-facebook',
+        'options' => array(
+            array(
+                'id' => 'text',
+                'label'    => __( 'Text Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'text',
+                'default' => 'Test Text',
+            ),
+            array(
+                'id' => 'email',
+                'label'    => __( 'Email Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'email',
+                'default' => 'example@gmail.com',
+            ),
+            array(
+                'id' => 'textarea',
+                'label'    => __( 'Textarea Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'textarea',
+                'default' => 'Test Text',
+            ),
+            array(
+                'id' => 'editor',
+                'label'    => __( 'Editor Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'editor',
+                'default' => 'Test Text',
+                'roll' => 'content'
+            ),
+            array(
+                'id' => 'select',
+                'label'    => __( 'Select Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'select',
+                'default' => 'test2',
+                'choices' => array(
+                    'test1' => 'Test 1',
+                    'test2' => 'Test 2',
+                    'test3' => 'Test 3'
+                )
+            ),
+            array(
+                'id' => 'radio',
+                'label'    => __( 'Radio Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'radio',
+                'default' => 'test2',
+                'choices' => array(
+                    'test1' => 'Test 1',
+                    'test2' => 'Test 2',
+                    'test3' => 'Test 3'
+                )
+            ),
+            array(
+                'id' => 'checkbox',
+                'label'    => __( 'Checkbox Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'checkbox',
+                'default' => array(
+                    'test2'
+                ),
+                'choices' => array(
+                    'test1' => 'Test 1',
+                    'test2' => 'Test 2',
+                    'test3' => 'Test 3'
+                )
+            ),
+            array(
+                'id' => 'radio_image',
+                'label'    => __( 'Radio Image Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'radio_image',
+                'default' => 'test2',
+                'choices' => array(
+                    'test1' => get_home_url().'/wp-admin//images/align-left-2x.png',
+                    'test2' => get_home_url().'/wp-admin//images/align-center-2x.png',
+                    'test3' => get_home_url().'/wp-admin//images/align-right-2x.png',
+                )
+            ),
+            array(
+                'id' => 'checkbox_image',
+                'label'    => __( 'Checkbox Image Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'checkbox_image',
+                'default' => array(
+                    'test2'
+                ),
+                'choices' => array(
+                    'test1' => get_home_url().'/wp-admin//images/align-left-2x.png',
+                    'test2' => get_home_url().'/wp-admin//images/align-center-2x.png',
+                    'test3' => get_home_url().'/wp-admin//images/align-right-2x.png',
+                )
+            ),
+            array(
+                'id' => 'radio_button',
+                'label'    => __( 'Radio Button Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'radio_button',
+                'default' => 'test2',
+                'choices' => array(
+                    'test1' => 'Test 1',
+                    'test2' => 'Test 2',
+                    'test3' => 'Test 3'
+                )
+            ),
+            array(
+                'id' => 'checkbox_button',
+                'label'    => __( 'Checkbox Button Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'checkbox_button',
+                'default' => array(
+                    'test1',
+                    'test3'
+                ),
+                'choices' => array(
+                    'test1' => 'Test 1',
+                    'test2' => 'Test 2',
+                    'test3' => 'Test 3'
+                )
+            ),
+            array(
+                'id' => 'text_multi',
+                'label'    => __( 'Multi-Text Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'text_multi',
+                'default' => array(
+                    'test 1',
+                    'test 2'
+                )
+            ),
+            array(
+                'id' => 'number',
+                'label'    => __( 'Number Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'number',
+                'default' => '50',
+            ),
+            array(
+                'id' => 'range',
+                'label'    => __( 'Range Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'range',
+                'default' => '50',
+            ),
+            array(
+                'id' => 'dimension',
+                'label'    => __( 'Dimension Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'dimension',
+                'default' => '20px',
+            ),
+            array(
+                'id' => 'Icon',
+                'label'    => __( 'Icon Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'icon',
+                'default' => 'fa fa-cogs',
+            ),
+            array(
+                'id' => 'color',
+                'label'    => __( 'Color Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'color',
+                'default' => '#ff00ff',
+            ),
+            array(
+                'id' => 'rgba',
+                'label'    => __( 'RGBA Color Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'color_rgba',
+                'default' => 'rgba(25,56,58,0.65)',
+            ),
+            array(
+                'id' => 'font_style',
+                'label'    => __( 'Font Style Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'font_style',
+                'default' => array(
+                    'bold' => 'on',
+                    'italic' => 'off',
+                    'underline' => 'off',
+                    'strikethrough' => 'on',
+                ),
+            ),
+            array(
+                'id' => 'text_align',
+                'label'    => __( 'Text Align Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'text_align',
+                'default' => 'left',
+            ),
+            array(
+                'id' => 'image',
+                'label'    => __( 'Image Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'image',
+                'default' => array(),
+            ),
+            array(
+                'id' => 'font',
+                'label'    => __( 'Google Font Input', 'mytheme' ),
+                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+                'type'     => 'google_font',
+                'default' => array(),
+            )
+        )
+    ) );
 }
