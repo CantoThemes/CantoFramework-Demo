@@ -651,7 +651,7 @@ function test_sc_map() {
                 'default' => 'Test Text',
             ),
             array(
-                'id' => 'editor',
+                'id' => 'editor_sc',
                 'label'    => __( 'Editor Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'editor',
@@ -836,4 +836,43 @@ function test_sc_map() {
             )
         )
     ) );
+}
+
+
+
+if (class_exists('CTPB_Element')) {
+	CTPB_Element::add(array(
+		'title' => 'Test 2 Shortcode',
+        'subtitle' => 'Test Shortcode Subtitle',
+        'code' => 'test2',
+        'hascontent' => true,
+        'icon' => 'fa fa-facebook',
+        'options' => array(
+        	array(
+	            'id' => 'data',
+	            'label'    => __( 'Text Input', 'mytheme' ),
+	            'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+	            'type'     => 'text',
+	            'default' => 'Test Text',
+	        ),
+	        array(
+	            'id' => 'color',
+	            'label'    => __( 'Color Input', 'mytheme' ),
+	            'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+	            'type'     => 'color',
+	            'default' => '#ffffff',
+	        ),
+	        array(
+	            'id' => 'multi',
+	            'label'    => __( 'Multi-Text Input', 'mytheme' ),
+	            'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+	            'type'     => 'text_multi',
+	            'default' => array(
+	                'test 1',
+	                'test 2'
+	            )
+	        ),
+        )
+	));
+
 }
