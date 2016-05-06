@@ -583,12 +583,7 @@ if (class_exists('CTF_Customizer')) {
 test_sc_map();
 function test_sc_map() {
 	
-
-    if ( ! class_exists('CTSCG') ) {
-        return;
-    }
-
-    CTSCG::add_shortcodes_data( array(
+	$test_sc = array(
         'title' => 'Test Shortcode',
         'subtitle' => 'Test Shortcode Subtitle',
         'code' => 'test',
@@ -620,9 +615,9 @@ function test_sc_map() {
                 )
             ),
         )
-    ) );
-
-    CTSCG::add_shortcodes_data( array(
+    );
+    
+    $tst_sc_2 = array(
         'title' => 'Test 2 Shortcode',
         'subtitle' => 'Test Shortcode Subtitle',
         'code' => 'test2',
@@ -651,7 +646,7 @@ function test_sc_map() {
                 'default' => 'Test Text',
             ),
             array(
-                'id' => 'editor_sc',
+                'id' => 'editor',
                 'label'    => __( 'Editor Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'editor',
@@ -835,44 +830,62 @@ function test_sc_map() {
                 'default' => array(),
             )
         )
-    ) );
-}
-
-
-
-if (class_exists('CTPB_Element')) {
-	CTPB_Element::add(array(
-		'title' => 'Test 2 Shortcode',
-        'subtitle' => 'Test Shortcode Subtitle',
-        'code' => 'test2',
-        'hascontent' => true,
-        'icon' => 'fa fa-facebook',
-        'options' => array(
-        	array(
-	            'id' => 'data',
-	            'label'    => __( 'Text Input', 'mytheme' ),
-	            'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
-	            'type'     => 'text',
-	            'default' => 'Test Text',
-	        ),
-	        array(
-	            'id' => 'color',
-	            'label'    => __( 'Color Input', 'mytheme' ),
-	            'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
-	            'type'     => 'color',
-	            'default' => '#ffffff',
-	        ),
-	        array(
-	            'id' => 'multi',
-	            'label'    => __( 'Multi-Text Input', 'mytheme' ),
-	            'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
-	            'type'     => 'text_multi',
-	            'default' => array(
-	                'test 1',
-	                'test 2'
+    );
+   
+    
+    if ( class_exists('CTPB_Element') ) {
+    	CTPB_Element::add($test_sc);
+    	CTPB_Element::add($tst_sc_2);
+    	
+    	CTPB_Element::add(array(
+	        'title' => 'Tab',
+	        'subtitle' => 'Test Shortcode Subtitle',
+	        'code' => 'tab',
+	        'child' => 'tab_item',
+	        'hascontent' => true,
+	        'icon' => 'fa fa-cogs',
+	        'options' => array(
+	            array(
+	                'id' => 'data',
+	                'label'    => __( 'Text Input', 'mytheme' ),
+	                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+	                'type'     => 'text',
+	                'default' => 'Test Text',
+	            ),
+	            array(
+	                'id' => 'color',
+	                'label'    => __( 'Color Input', 'mytheme' ),
+	                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+	                'type'     => 'color',
+	                'default' => '#ffffff',
 	            )
-	        ),
-        )
-	));
+	        )
+	    ));
+	    
+	    CTPB_Element::add(array(
+	        'title' => 'Tab Item',
+	        'subtitle' => 'Test Shortcode Subtitle',
+	        'code' => 'tab_item',
+	        'parent' => 'tab',
+	        'icon' => 'fa fa-cogs',
+	        'options' => array(
+	            array(
+	                'id' => 'data',
+	                'label'    => __( 'Text Input', 'mytheme' ),
+	                'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
+	                'type'     => 'textarea',
+	                'default' => 'Test Text',
+	            )
+	        )
+	    ));
+    }
+	
 
+    if ( ! class_exists('CTSCG') ) {
+        return;
+    }
+
+    CTSCG::add_shortcodes_data($test_sc);
+
+    CTSCG::add_shortcodes_data( $tst_sc_2 );
 }
