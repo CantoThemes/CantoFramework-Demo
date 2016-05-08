@@ -624,36 +624,36 @@ function test_sc_map() {
         'hascontent' => true,
         'icon' => 'fa fa-facebook',
         'options' => array(
-            array(
+            /*array(
                 'id' => 'text',
                 'label'    => __( 'Text Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'text',
                 'default' => 'Test Text',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'email',
                 'label'    => __( 'Email Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'email',
                 'default' => 'example@gmail.com',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'textarea',
                 'label'    => __( 'Textarea Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'textarea',
                 'default' => 'Test Text',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'editor',
                 'label'    => __( 'Editor Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'editor',
                 'default' => 'Test Text',
                 'roll' => 'content'
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'select',
                 'label'    => __( 'Select Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -664,8 +664,8 @@ function test_sc_map() {
                     'test2' => 'Test 2',
                     'test3' => 'Test 3'
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'radio',
                 'label'    => __( 'Radio Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -676,8 +676,8 @@ function test_sc_map() {
                     'test2' => 'Test 2',
                     'test3' => 'Test 3'
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'checkbox',
                 'label'    => __( 'Checkbox Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -690,8 +690,8 @@ function test_sc_map() {
                     'test2' => 'Test 2',
                     'test3' => 'Test 3'
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'radio_image',
                 'label'    => __( 'Radio Image Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -702,8 +702,8 @@ function test_sc_map() {
                     'test2' => get_home_url().'/wp-admin//images/align-center-2x.png',
                     'test3' => get_home_url().'/wp-admin//images/align-right-2x.png',
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'checkbox_image',
                 'label'    => __( 'Checkbox Image Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -716,8 +716,8 @@ function test_sc_map() {
                     'test2' => get_home_url().'/wp-admin//images/align-center-2x.png',
                     'test3' => get_home_url().'/wp-admin//images/align-right-2x.png',
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'radio_button',
                 'label'    => __( 'Radio Button Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -728,8 +728,8 @@ function test_sc_map() {
                     'test2' => 'Test 2',
                     'test3' => 'Test 3'
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'checkbox_button',
                 'label'    => __( 'Checkbox Button Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -743,8 +743,8 @@ function test_sc_map() {
                     'test2' => 'Test 2',
                     'test3' => 'Test 3'
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'text_multi',
                 'label'    => __( 'Multi-Text Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -753,21 +753,21 @@ function test_sc_map() {
                     'test 1',
                     'test 2'
                 )
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'number',
                 'label'    => __( 'Number Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'number',
                 'default' => '50',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'range',
                 'label'    => __( 'Range Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'range',
                 'default' => '50',
-            ),
+            ),*/
             array(
                 'id' => 'dimension',
                 'label'    => __( 'Dimension Input', 'mytheme' ),
@@ -775,28 +775,28 @@ function test_sc_map() {
                 'type'     => 'dimension',
                 'default' => '20px',
             ),
-            array(
+            /*array(
                 'id' => 'Icon',
                 'label'    => __( 'Icon Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'icon',
                 'default' => 'fa fa-cogs',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'color',
                 'label'    => __( 'Color Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'color',
                 'default' => '#ff00ff',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'rgba',
                 'label'    => __( 'RGBA Color Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'color_rgba',
                 'default' => 'rgba(25,56,58,0.65)',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'font_style',
                 'label'    => __( 'Font Style Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
@@ -807,28 +807,28 @@ function test_sc_map() {
                     'underline' => 'off',
                     'strikethrough' => 'on',
                 ),
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'text_align',
                 'label'    => __( 'Text Align Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'text_align',
                 'default' => 'left',
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'image',
                 'label'    => __( 'Image Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'image',
                 'default' => array(),
-            ),
-            array(
+            ),*/
+            /*array(
                 'id' => 'font',
                 'label'    => __( 'Google Font Input', 'mytheme' ),
                 'subtitle'    => __( 'Lorem ipsum dolor sit amet', 'mytheme' ),
                 'type'     => 'google_font',
                 'default' => array(),
-            )
+            )*/
         )
     );
    
